@@ -1,11 +1,11 @@
-const express = require('express')
+const express = require('express')                            //import express framwork
 const articleRouter = require("./routes/articles")
 const Article = require('./models/article')
-const mongoose = require('mongoose')
+const mongoose = require('mongoose')                            // import mongobd database
 const methodOverride = require('method-override')
 const app = express()
 
-mongoose.connect('mongodb://localhost/articleDatabase')
+mongoose.connect('mongodb://localhost/articleDatabase')        //Connecting the localhost with the database
 
 app.set('view engine','ejs')        //view engine converts ejs files to html
 app.use(express.urlencoded({extended: false}))
